@@ -1,0 +1,15 @@
+{
+  "name": "javascript-tutor",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JS",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0",
+    "unixtimejs": "^0.1.1"
+  }
+}

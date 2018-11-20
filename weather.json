@@ -1,0 +1,97 @@
+{
+  "value": [
+    { "date": 1542607200000, "value": "2.6", "quality": "G" },
+    { "date": 1542610800000, "value": "2.4", "quality": "G" },
+    { "date": 1542614400000, "value": "2.1", "quality": "G" },
+    { "date": 1542618000000, "value": "2.3", "quality": "G" },
+    { "date": 1542621600000, "value": "2.5", "quality": "G" },
+    { "date": 1542625200000, "value": "2.6", "quality": "G" },
+    { "date": 1542628800000, "value": "2.6", "quality": "G" },
+    { "date": 1542632400000, "value": "2.6", "quality": "G" },
+    { "date": 1542636000000, "value": "2.5", "quality": "G" },
+    { "date": 1542639600000, "value": "1.8", "quality": "G" },
+    { "date": 1542643200000, "value": "1.8", "quality": "G" },
+    { "date": 1542646800000, "value": "1.7", "quality": "G" },
+    { "date": 1542650400000, "value": "0.1", "quality": "G" },
+    { "date": 1542654000000, "value": "-0.4", "quality": "G" },
+    { "date": 1542657600000, "value": "-1.6", "quality": "G" },
+    { "date": 1542661200000, "value": "-0.2", "quality": "G" },
+    { "date": 1542664800000, "value": "0.7", "quality": "G" },
+    { "date": 1542668400000, "value": "0.6", "quality": "G" },
+    { "date": 1542672000000, "value": "-1.9", "quality": "G" },
+    { "date": 1542675600000, "value": "-0.5", "quality": "G" },
+    { "date": 1542679200000, "value": "-1.1", "quality": "G" },
+    { "date": 1542682800000, "value": "-1.6", "quality": "G" },
+    { "date": 1542686400000, "value": "-1.5", "quality": "G" },
+    { "date": 1542690000000, "value": "-1.5", "quality": "Y" },
+    { "date": 1542693600000, "value": "-0.8", "quality": "Y" }
+  ],
+  "updated": 1542693600000,
+  "parameter": {
+    "key": "1",
+    "name": "Lufttemperatur",
+    "summary": "momentanvärde, 1 gång/tim",
+    "unit": "degree celsius"
+  },
+  "station": {
+    "key": "96190",
+    "name": "Eskilstuna A",
+    "owner": "SMHI",
+    "height": 2.0
+  },
+  "period": {
+    "key": "latest-day",
+    "from": 1542603601000,
+    "to": 1542693600000,
+    "summary": "Data från senaste dygnet",
+    "sampling": "Ej angivet"
+  },
+  "position": [
+    {
+      "from": 1200636000000,
+      "to": 1542693600000,
+      "height": 15.0,
+      "latitude": 59.3832,
+      "longitude": 16.4549
+    },
+    {
+      "from": 830908800000,
+      "to": 1141171199000,
+      "height": 42.0,
+      "latitude": 59.3529,
+      "longitude": 16.7116
+    }
+  ],
+  "link": [
+    {
+      "rel": "data",
+      "type": "application/json",
+      "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station/96190/period/latest-day/data.json"
+    },
+    {
+      "rel": "data",
+      "type": "application/xml",
+      "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station/96190/period/latest-day/data.xml"
+    },
+    {
+      "rel": "data",
+      "type": "text/plain",
+      "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station/96190/period/latest-day/data.csv"
+    },
+    {
+      "rel": "period",
+      "type": "application/atom+xml",
+      "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station/96190/period/latest-day.atom"
+    },
+    {
+      "rel": "iso19139",
+      "type": "application/vnd.iso.19139+xml",
+      "href": "https://opendata-catalog.smhi.se/catalog/srv/eng/csw?request=GetRecordById&service=CSW&version=2.0.2&elementSetName=full&outputSchema=csw:IsoRecord&id=25080190-38ba-4279-a65d-d9ef8d0bf949"
+    },
+    {
+      "rel": "iso19139",
+      "type": "application/vnd.iso.19139+xml",
+      "href": "https://opendata-catalog.smhi.se/catalog/srv/eng/csw?request=GetRecordById&service=CSW&version=2.0.2&elementSetName=full&outputSchema=csw:IsoRecord&id=c6ae10b6-6a18-4e15-9444-fbd746f4609d"
+    }
+  ]
+}
