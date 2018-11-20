@@ -31,12 +31,12 @@ request( { url: url, json: true},
       });
       */
 
-    body.value.forEach(function(element){
-      var utcString = UT.toLocaleString(element.date / 1000)
-      var temp = element.value
+      body.value.forEach(function(element){
+        var utcString = UT.toLocaleString(element.date / 1000)
+        var temp = element.value
 
-      console.log(utcString + " --> " + temp + "℃")
-    }) 
+        console.log(utcString + " --> " + temp + "℃")
+      }) 
 
 
     }
