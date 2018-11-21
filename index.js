@@ -39,7 +39,7 @@ request( { url: url, json: true},
       }) 
 
 
-    }
+    
 })
 
 
