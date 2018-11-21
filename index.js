@@ -37,9 +37,8 @@ request( { url: url, json: true},
 
         console.log(utcString + " --> " + temp + "℃")
       }) 
-
-
     
+  }
 })
 
 
