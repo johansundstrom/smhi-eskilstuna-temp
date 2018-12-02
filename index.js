@@ -21,45 +21,48 @@ request(url, { json: true }, (err, res, body) => {
 request( { url: url, json: true}, 
   function (err, res, body) {
 
-  if (!err && res.statusCode === 200) {
+    if (!err && res.statusCode === 200) {
 
-    for (var i = 0; i < body.timeSeries.length; i++)
-    {
-      if (body.timeSeries[0].parameters[i].name === 't')
+      for (var i = 0; i < body.timeSeries.length; i++)
       {
-        console.log(body.timeSeries[0].parameters[i].value)
+        if (body.timeSeries[0].parameters[i].name == 't')
+        {
+          console.log(i + ': ' + body.timeSeries[0].parameters[i].name + ' : ' + body.timeSeries[0].parameters[i].values[0] + ' ' + body.timeSeries[0].parameters[i].unit)
+          //console.log(body.timeSeries[0].parameters[i].unit)
+          //console.log(body.timeSeries[0].parameters[i].values[0])
+        } else {
+          console.log(i + ': ' + body.timeSeries[0].parameters[i].name + ' : ' + body.timeSeries[0].parameters[i].values[0] + ' ' + body.timeSeries[0].parameters[i].unit)
+        }
       }
-    }
-    
-    
-    /*
-    body.timeSeries[0].parameters[1].values.forEach(function(element){
-      console.log(element)
-    })
-    console.log(body.timeSeries[0].parameters[1].name)
-    //console.log(body.timeSeries[0].parameters[1].values[0])
-    */
-
+      
+      
       /*
-      // ES6
-      body.value.forEach(element => {
-        var utcString = UT.toLocaleString(element.date / 1000)
-        var temp = element.value
-
-        console.log(utcString + " --> " + temp + "℃")
-      });
+      body.timeSeries[0].parameters[1].values.forEach(function(element){
+        console.log(element)
+      })
+      console.log(body.timeSeries[0].parameters[1].name)
+      //console.log(body.timeSeries[0].parameters[1].values[0])
       */
 
-      /*
-      body.value.forEach(function(element){
-        var utcString = UT.toLocaleString(element.date / 1000)
-        var temp = element.value
+        /*
+        // ES6
+        body.value.forEach(element => {
+          var utcString = UT.toLocaleString(element.date / 1000)
+          var temp = element.value
 
-        console.log(utcString + " --> " + temp + "℃")
-      })
-      */ 
-    
-  }
+          console.log(utcString + " --> " + temp + "℃")
+        });
+        */
+
+        /*
+        body.value.forEach(function(element){
+          var utcString = UT.toLocaleString(element.date / 1000)
+          var temp = element.value
+
+          console.log(utcString + " --> " + temp + "℃")
+        })
+        */ 
+    }
 })
 
 
