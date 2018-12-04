@@ -12,9 +12,17 @@ request( {url: smhiUrl, json: true},
       for (var i = 0; i < body.timeSeries[0].parameters.length; i++)
       {
         if (body.timeSeries[0].parameters[i].name == 't')
-          {
-            console.log(body.timeSeries[0].parameters[i].name + ': ' + body.timeSeries[0].parameters[i].values[0] + '°' + body.timeSeries[0].parameters[i].unit)
-          }      
+        {
+          console.log('Temp: ' + body.timeSeries[0].parameters[i].values[0] + '°' + body.timeSeries[0].parameters[i].unit)
+        }
+        if (body.timeSeries[0].parameters[i].name == 'msl')
+        {
+          console.log('Lufttryck: ' + body.timeSeries[0].parameters[i].values[0] + body.timeSeries[0].parameters[i].unit)
+        }
+        if (body.timeSeries[0].parameters[i].name == 'wd')
+        {
+          console.log('Vind: ' + body.timeSeries[0].parameters[i].values[0] + ' ' + body.timeSeries[0].parameters[i].unit)
+        }   
       }
     }
 })
