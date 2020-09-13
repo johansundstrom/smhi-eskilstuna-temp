@@ -10,7 +10,7 @@ let request = require("request")
 let host = 'https://opendata-download-metfcst.smhi.se';
 let getForecast = '/api/category/pmp3g/version/2/geotype/point/lon/' + lon + '/lat/' + lat + '/data.json';
 let smhiUrl = host + getForecast;
-let myParams = ['t', 'msl', 'ws'];
+let myParams = ['t', 'msl', 'ws', 'wd'];
 
 
 request({ url: smhiUrl, json: true },
@@ -24,14 +24,17 @@ request({ url: smhiUrl, json: true },
                 //console.log(json.timeSeries[0].parameters.length); //19 prognosparameters
 
                 for (let j = 0; j < json.timeSeries[i].parameters.length; j++) {
-                    if (json.timeSeries[i].parameters[j].name == 't') {
+                    if (json.timeSeries[i].parameters[j].name == myParams[0]) {
                         console.log('Temp: ' + json.timeSeries[i].parameters[j].values[0] + '°' + json.timeSeries[i].parameters[j].unit)
                     }
-                    if (json.timeSeries[i].parameters[j].name == 'msl') {
+                    if (json.timeSeries[i].parameters[j].name == myParams[1]) {
                         console.log('Lufttryck: ' + json.timeSeries[i].parameters[j].values[0] + json.timeSeries[i].parameters[j].unit)
                     }
-                    if (json.timeSeries[i].parameters[j].name == 'ws') {
+                    if (json.timeSeries[i].parameters[j].name == myParams[2]) {
                         console.log('Vind: ' + json.timeSeries[i].parameters[j].values[0] + ' ' + json.timeSeries[i].parameters[j].unit)
+                    }
+                    if (json.timeSeries[i].parameters[j].name == myParams[3]) {
+                        console.log('Vindriktning: ' + json.timeSeries[i].parameters[j].values[0] + ' ' + json.timeSeries[i].parameters[j].unit)
                     }
                 }
                 console.log('----');
