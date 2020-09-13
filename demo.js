@@ -1,13 +1,13 @@
 var request = require("request")
 var UT = require("unixtimejs");
 
-var host = "https://opendata-download-metobs.smhi.se"
-var host = "https://opendata-download-metfcst.smhi.se"
-var qs = "/api/version/1.0/parameter/1/station/96190/period/latest-day/data.json"
-var qs = "/api/category/pmp3g/version/2/geotype/point/lon/16.468774/lat/59.415067/data.json"
-var myBody = {}
+var host = 'https://opendata-download-metobs.smhi.se';
+var host = 'https://opendata-download-metfcst.smhi.se';
+var qsParams = '/api/version/1.0/parameter/1/station/96190/period/latest-day/data.json';
+var qsData = '/api/category/pmp3g/version/2/geotype/point/lon/16.468774/lat/59.415067/data.json';
 
-var url = host + qs
+var weatherUrl = host + qsData;
+var paramsUrl = host + qsParams;
 
 /*
 // ES6
@@ -18,7 +18,7 @@ request(url, { json: true }, (err, res, body) => {
 */
 
 
-request( { url: url, json: true}, 
+request( { url: weatherUrl, json: true}, 
   function (err, res, body) {
 
     if (!err && res.statusCode === 200) {
